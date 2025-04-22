@@ -70,6 +70,24 @@ uv pip install -e .
 uv run mcp dev arxiv_mcp/server.py
 ```
 
+## 🔌 Use with Claude
+
+To use this MCP server with Claude, add the following JSON configuration to Claude's MCP settings:
+
+```json
+{
+  "arXivPaper": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--with",
+      "arxiv-paper-mcp>=0.1.0",
+      "arxiv-mcp"
+    ]
+  }
+}
+```
+
 ## Project Structure
 ```
 arxiv-mcp-server/

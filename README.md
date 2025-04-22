@@ -43,12 +43,18 @@ It allows clients like **Claude AI** to search, explore, and compare arXiv paper
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Installation from PyPI
+```bash
+pip install arxiv-paper-mcp
+# or with uv
+uv install arxiv-paper-mcp
+```
+### 🔧 2. Clone the repository (for development)
 ```bash
 git clone https://github.com/daheepk/arxiv-mcp-server.git
-cd mcp-server-demo
+cd arxiv-mcp-server
 ```
-### 🔧 2. Install Dependencies
+### 🔧 3. Install Dependencies (for development)
 
 Use `uv` to install all dependencies in editable mode:
 
@@ -60,24 +66,17 @@ uv pip install -e .
 
 ### ▶️ Run the server (locally)
 
-You can start the server in two ways:
-
 ```bash
-uv run python -m server
-or using the project script defined in pyproject.toml:
-```
-
-```bash
-uv run arxiv-mcp
+uv run mcp dev arxiv_mcp/server.py
 ```
 
 ## Project Structure
 ```
-mcp-server-demo/
-├── server.py               # Entry point
+arxiv-mcp-server/
 ├── arxiv_mcp/              # Main package
 │   ├── __init__.py
 │   ├── app.py              # FastMCP app setup
+│   ├── server.py           # Server entry point
 │   ├── utils.py            # arXiv API communication logic
 │   ├── resources/          # MCP resources (categories, authors, etc.)
 │   ├── tools/              # MCP tools (search, detail lookup, trends)

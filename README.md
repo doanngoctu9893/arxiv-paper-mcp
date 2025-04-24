@@ -47,7 +47,7 @@ S
 ```bash
 pip install arxiv-paper-mcp
 # or with uv
-uv install arxiv-paper-mcp
+uv pip install arxiv-paper-mcp
 ```
 ### 🔧 2. Clone the repository (for development)
 ```bash

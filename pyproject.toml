@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "mcp-server-demo"
-version = "0.1.0"
+name = "arxiv-paper-mcp"
+version = "0.1.1"
 description = "arXiv 논문 데이터를 Claude AI와 연동하는 MCP 서버"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -11,5 +15,10 @@ dependencies = [
     "lxml>=4.0.0"
 ]
 
+authors = [
+    {name = "Park Dahee", email = "dahee.pk@gmail.com"}
+]
+keywords = ["arxiv", "claude", "ai", "research", "papers"]
+
 [project.scripts]
-arxiv-mcp = "server:main"
+arxiv-mcp = "arxiv_mcp.server:main"

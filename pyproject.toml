@@ -21,4 +21,5 @@ authors = [
 keywords = ["arxiv", "claude", "ai", "research", "papers"]
 
 [project.scripts]
-arxiv-mcp = "arxiv_mcp.server:main"
+arxiv-paper-mcp = "arxiv_mcp.server:main"
+

@@ -44,22 +44,10 @@ S
 ## 🚀 Getting Started
 
 ### 1. Installation from PyPI
-```bash
-pip install arxiv-paper-mcp
-# or with uv
-uv pip install arxiv-paper-mcp
-```
-### 🔧 2. Clone the repository (for development)
-```bash
-git clone https://github.com/daheepk/arxiv-mcp-server.git
-cd arxiv-mcp-server
-```
-### 🔧 3. Install Dependencies (for development)
 
-Use `uv` to install all dependencies in editable mode:
-
+Install using uv:
 ```bash
-uv pip install -e .
+uv pip install arxiv-mcp-server
 ```
 
 ## ⚙️ How to Run
@@ -67,7 +55,7 @@ uv pip install -e .
 ### ▶️ Run the server (locally)
 
 ```bash
-uv run mcp dev arxiv_mcp/server.py
+arxiv-paper-mcp
 ```
 
 ## 🔌 Use with Claude
@@ -76,14 +64,15 @@ To use this MCP server with Claude, add the following JSON configuration to Clau
 
 ```json
 {
-  "arXivPaper": {
-    "command": "uv",
-    "args": [
-      "run",
-      "--with",
-      "arxiv-paper-mcp>=0.1.0",
-      "arxiv-mcp"
-    ]
+  "mcpServers": {
+    "arXivPaper": {
+      "command": "uv",
+      "args": [
+        "tool",
+        "run",
+        "arxiv-paper-mcp"
+      ]
+    }
   }
 }
 ```

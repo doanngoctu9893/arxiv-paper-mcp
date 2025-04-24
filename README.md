@@ -5,7 +5,7 @@ This project is an MCP (Model Context Protocol) server built to interact with th
 It allows clients like **Claude AI** to search, explore, and compare arXiv papers efficiently — all through a custom-built, local server. It’s built with **Python** and the **FastMCP** framework, and uses **uv** for lightweight package management.
 
 ---
-
+S
 ## ✨ Features
 
 - **🔍 Keyword-based Paper Search**  

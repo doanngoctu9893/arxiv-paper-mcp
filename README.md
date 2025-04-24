@@ -47,7 +47,7 @@ S
 
 Install using uv:
 ```bash
-uv pip install arxiv-mcp-server
+uv pip install arxiv-paper-mcp
 ```
 
 ## ⚙️ How to Run

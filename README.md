@@ -44,7 +44,6 @@ It allows clients like **Claude AI** to search, explore, and compare arXiv paper
 
 ## 🚀 Getting Started
 
-
 ### Installing via Smithery
 
 To install arXiv Research Assistant MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/arxiv-paper-mcp):

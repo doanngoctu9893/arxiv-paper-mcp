@@ -8,11 +8,11 @@ from arxiv_mcp.prompts import prompts
 
 def main():
 
-    print("서버 시작...", file=sys.stderr) 
+    print("Đang khởi động máy chủ...", file=sys.stderr) 
     
     mcp.run()
     
-    print("서버 종료됨.", file=sys.stderr)
+    print("Máy chủ ngừng hoạt động.", file=sys.stderr)
 
 if __name__ == "__main__":
     main() 

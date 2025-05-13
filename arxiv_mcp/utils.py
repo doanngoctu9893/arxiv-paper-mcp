@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(leve
 logger = logging.getLogger(__name__) 
 
 def fetch_arxiv_papers(category: str, max_results: int = 5) -> List[Dict[str, Any]]:
-    """arXiv API에서 특정 카테고리의 논문 데이터를 가져옵니다."""
+    """Fetches paper data from arXiv API for a specific category."""
     base_url = "http://export.arxiv.org/api/query"
     params = {
         'search_query': f'cat:{category}',
@@ -63,7 +63,7 @@ def fetch_arxiv_papers(category: str, max_results: int = 5) -> List[Dict[str, An
     return papers
 
 def search_by_keyword(keyword: str, max_results: int = 5, sort_by: str = 'relevance') -> List[Dict[str, Any]]:
-    """키워드로 arXiv 논문을 검색합니다. sort_by 파라미터로 정렬 기준을 지정할 수 있습니다 ('relevance' 또는 'submittedDate')."""
+    """Searches arXiv papers by keyword. Sort by parameter can be either 'relevance' or 'submittedDate'."""
     base_url = "http://export.arxiv.org/api/query"
     params = {
         'search_query': f'all:{keyword}',
@@ -119,7 +119,7 @@ def search_by_keyword(keyword: str, max_results: int = 5, sort_by: str = 'releva
     return papers
 
 def get_paper_details(paper_id: str) -> Optional[Dict[str, Any]]:
-    """논문 ID로 상세 정보를 가져옵니다."""
+    """Gets detailed information for a paper by its ID."""
     base_url = "http://export.arxiv.org/api/query"
     params = {
         'id_list': paper_id
@@ -168,7 +168,7 @@ def get_paper_details(paper_id: str) -> Optional[Dict[str, Any]]:
     }
 
 def scrape_recent_papers(category: str, max_results: int = 25) -> List[Dict[str, str]]:
-    """특정 카테고리의 arXiv 'recent' 페이지를 크롤링하여 오늘 날짜의 논문 ID와 제목 목록을 가져옵니다."""
+    """Crawls arXiv 'recent' page for a specific category and retrieves paper IDs and titles for today's papers."""
     logger.debug(f"--- scrape_recent_papers function entered for category: {category} ---") 
     recent_url = f"https://arxiv.org/list/{category}/recent"
     headers = {
@@ -297,4 +297,3 @@ def scrape_recent_papers(category: str, max_results: int = 25) -> List[Dict[str,
 
     logger.info(f"Successfully extracted {len(papers)} papers for category {category}.") 
     return papers
-

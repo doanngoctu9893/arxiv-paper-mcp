@@ -1,3 +1,3 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("arXiv 연구 도우미") 
+mcp = FastMCP("arXiv Trợ lý nghiên cứu) 
